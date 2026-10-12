@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #6366f1;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.15s;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-size: 0.875rem;
+}
+.btn-primary:hover { background-color: #4f46e5; }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #475569;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.15s;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+.btn-ghost:hover { border-color: #6366f1; color: #6366f1; }
+
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.15s;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.btn-wa:hover { background-color: #128C7E; }
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateY(-2px); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 9999px;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.section-sub { color: #64748b; margin-top: 0.5rem; font-size: 1rem; }
+
+.input-field {
+  width: 100%;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  background: white;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input-field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.08);
+}
+.input-field::placeholder { color: #94a3b8; }

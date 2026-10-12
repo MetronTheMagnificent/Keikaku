@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+const {
+  title,
+  description = 'Directorio de negocios en Nuevo León. Encuentra restaurantes, talleres, clínicas, gimnasios y más en Monterrey y el área metropolitana.',
+  canonical = 'https://keikaku.mx',
+  ogImage = 'https://keikaku.mx/og-image.png',
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | Keikaku — Directorio NL</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="MX-NL" />
+  <meta name="geo.placename" content="Monterrey, Nuevo León, México" />
+  <link rel="canonical" href={canonical} />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content={canonical} />
+  <meta property="og:site_name"   content="Keikaku — Directorio NL" />
+  <meta property="og:title"       content={`${title} | Keikaku`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image"       content={ogImage} />
+  <meta property="og:locale"      content="es_MX" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content={`${title} | Keikaku`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image"       content={ogImage} />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body style="font-family:'Inter',sans-serif; background-color:#f5f7fa; color:#0f172a;">
+  <slot />
+</body>
+</html>
